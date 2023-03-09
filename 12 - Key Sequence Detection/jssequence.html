@@ -8,6 +8,16 @@
 </head>
 <body>
 <script>
+  const pressed = []
+  const secretcode = 'wesbos';
+  window.addEventListener('keyup', (e) => {console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretcode.length -1, pressed.length -secretcode.length);
+  if(pressed.join('').includes(secretcode)){
+    console.log("Yeah YEAH")
+  };
+  console.log(pressed)
+  });
 </script>
 </body>
 </html>
